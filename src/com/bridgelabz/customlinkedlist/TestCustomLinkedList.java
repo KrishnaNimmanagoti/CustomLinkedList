@@ -8,8 +8,7 @@ public class TestCustomLinkedList {
         customLinkedList.add(70);
         customLinkedList.add(30);
         customLinkedList.add(56);
-        customLinkedList.add("krish");
-        customLinkedList.addAtPosition(20.43, 2);
+        customLinkedList.deleteFirst();
 
         customLinkedList.viewList();
     }

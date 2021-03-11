@@ -69,4 +69,14 @@ public class CustomLinkedList<T> {
 
         }
     }
+
+    public void deleteFirst() {
+        if (head == null) {
+            System.out.println("List is already empty");
+        }
+        else {
+            head = head.next;
+            size--;
+        }
+    }
 }
