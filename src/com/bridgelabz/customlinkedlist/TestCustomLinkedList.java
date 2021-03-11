@@ -3,9 +3,14 @@ package com.bridgelabz.customlinkedlist;
 public class TestCustomLinkedList {
 
     public static void main(String[] args) {
-        CustomLinkedList customLinkedList = new CustomLinkedList();
-        System.out.println("Created empty List: " + customLinkedList.isEmpty() + ", with size: "
-                            + customLinkedList.getSize());
+        CustomLinkedList<Object> customLinkedList = new CustomLinkedList<>();
+
+        customLinkedList.add(70);
+        customLinkedList.add('k');
+        customLinkedList.add("krish");
+        customLinkedList.add(20.43);
+
+        customLinkedList.viewList();
     }
 
 }

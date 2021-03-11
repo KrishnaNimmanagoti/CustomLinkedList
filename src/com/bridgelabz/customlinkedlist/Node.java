@@ -1,11 +1,12 @@
 package com.bridgelabz.customlinkedlist;
 
-public class Node {
-    int data;
-    Node next;
+public class Node<T> {
+    T key;
+    Node<T> next;
 
-    public Node() {
-        this.data = 0;
+    public Node(T key){
+        this.key = key;
         this.next = null;
     }
+
 }
