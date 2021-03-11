@@ -42,4 +42,11 @@ public class CustomLinkedList<T> {
         }
         size++;
     }
+
+    public void addAtFirst(T value) {
+        Node node = new Node(value);
+        node.next = head;
+        head = node;
+        size++;
+    }
 }

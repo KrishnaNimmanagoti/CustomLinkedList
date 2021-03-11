@@ -5,10 +5,10 @@ public class TestCustomLinkedList {
     public static void main(String[] args) {
         CustomLinkedList<Object> customLinkedList = new CustomLinkedList<>();
 
-        customLinkedList.add(70);
-        customLinkedList.add('k');
-        customLinkedList.add("krish");
-        customLinkedList.add(20.43);
+        customLinkedList.addAtFirst(70);
+        customLinkedList.addAtFirst(30);
+        customLinkedList.addAtFirst(56);
+        customLinkedList.addAtFirst(20.43);
 
         customLinkedList.viewList();
     }
