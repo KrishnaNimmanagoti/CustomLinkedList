@@ -2,7 +2,7 @@ package com.bridgelabz.customlinkedlist;
 
 public class CustomLinkedList<T extends Comparable<T>> {
     int size;
-    Node head;
+    Node<T> head;
     int pos;
 
     public CustomLinkedList() {
@@ -70,7 +70,8 @@ public class CustomLinkedList<T extends Comparable<T>> {
         }
     }
 
-    public void deleteFirst() {
+    public T deleteFirst() {
+        T value = (T) head.key;
         if (head == null) {
             System.out.println("List is already empty");
         }
@@ -78,6 +79,7 @@ public class CustomLinkedList<T extends Comparable<T>> {
             head = head.next;
             size--;
         }
+        return value;
     }
 
     public void deleteLast() {
