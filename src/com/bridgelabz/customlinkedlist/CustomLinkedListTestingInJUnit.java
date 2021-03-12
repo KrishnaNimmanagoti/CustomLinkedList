@@ -1,16 +1,22 @@
 package com.bridgelabz.customlinkedlist;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
-public class TestCustomLinkedList {
+public class CustomLinkedListTestingInJUnit {
 
-    public static void main(String[] args) {
+
+
+    @Test
+    public void search() {
+
         CustomLinkedList<Object> customLinkedList = new CustomLinkedList<>();
 
         customLinkedList.add(70);
         customLinkedList.add(30);
         customLinkedList.add(56);
         customLinkedList.addAtFirst(33);
-        customLinkedList.search(56);
         customLinkedList.viewList();
+        Assertions.assertTrue(customLinkedList.search(56));
     }
 
 }

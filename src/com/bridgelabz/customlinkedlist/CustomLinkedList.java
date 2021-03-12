@@ -96,4 +96,28 @@ public class CustomLinkedList<T> {
             size--;
         }
     }
+
+    public boolean search(T value) {
+        Node node, temp;
+        boolean flag = false;
+        temp = head;
+        if (head == null) {
+            System.out.println("List is already empty");
+        }
+        else {
+            for (int i=1; i <= size; i++) {
+                if (temp.key == value) {
+                    System.out.println("Match found");
+                    flag = true;
+                    System.out.println("Element is at position: " + i);
+                    break;
+                }
+                temp = temp.next;
+            }
+            if (!flag) {
+                System.out.println("Element is not Present");
+            }
+        }
+    return flag;
+    }
 }
