@@ -3,19 +3,16 @@ package com.bridgelabz.customlinkedlist;
 public class TestCustomLinkedList {
 
     public static void main(String[] args) {
-        CustomLinkedList<Object> customLinkedList = new CustomLinkedList<>();
+        CustomLinkedList<Integer> customLinkedList = new CustomLinkedList<>();
 
-        customLinkedList.add(70);
-        customLinkedList.add(30);
-        customLinkedList.add(44);
-        customLinkedList.add(66);
-        customLinkedList.add(77);
-        customLinkedList.add(88);
-        customLinkedList.add(99);
-
-        customLinkedList.delete(3);
-        customLinkedList.delete(44);
-
+        customLinkedList.insertInOrder(70);
+        customLinkedList.insertInOrder(30);
+        customLinkedList.insertInOrder(44);
+        customLinkedList.insertInOrder(66);
+        customLinkedList.insertInOrder(77);
+        customLinkedList.insertInOrder(88);
+        customLinkedList.insertInOrder(99);
+        
         customLinkedList.viewList();
     }
 
