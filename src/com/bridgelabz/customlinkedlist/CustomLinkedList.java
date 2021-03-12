@@ -3,6 +3,7 @@ package com.bridgelabz.customlinkedlist;
 public class CustomLinkedList<T> {
     int size;
     Node head;
+    int pos;
 
     public CustomLinkedList() {
         this.size = 0;
@@ -55,18 +56,17 @@ public class CustomLinkedList<T> {
             addAtFirst(value);
         } else if (position == size + 1) {
             add(value);
-        } else if (position > 1 && position <= size) {
+        } else if (position > 1 && position-1 <= size) {
             Node node, temp;
             node = new Node(value);
             temp = head;
-            for (int i = 1; i < position; i++)
+            for (int i = 1; i < position-1; i++)
                 temp = temp.next;
             node.next = temp.next;
             temp.next = node;
             size++;
         } else {
             System.out.println("Insertion is not possible at: " + position);
-
         }
     }
 
@@ -109,6 +109,7 @@ public class CustomLinkedList<T> {
                 if (temp.key == value) {
                     System.out.println("Match found");
                     flag = true;
+                    pos = i;
                     System.out.println("Element is at position: " + i);
                     break;
                 }
@@ -119,5 +120,13 @@ public class CustomLinkedList<T> {
             }
         }
     return flag;
+    }
+
+    public boolean placeElementAfterProvidedElement(T keyValue, T placeValue) {
+        boolean result = search(keyValue);
+        addAtPosition(placeValue, pos + 1);
+        System.out.println("The provide value " + placeValue + " is placed after " + keyValue +
+                            " in the position: " + (pos+1));
+        return result;
     }
 }
