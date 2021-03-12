@@ -7,9 +7,10 @@ public class TestCustomLinkedList {
 
         customLinkedList.add(70);
         customLinkedList.add(30);
-        customLinkedList.add(56);
-        customLinkedList.addAtFirst(33);
-        customLinkedList.search(56);
+        customLinkedList.add(44);
+        customLinkedList.add(66);
+        customLinkedList.addAtPosition(22,2);
+        customLinkedList.placeElementAfterProvidedElement(44, 45);
         customLinkedList.viewList();
     }
 
