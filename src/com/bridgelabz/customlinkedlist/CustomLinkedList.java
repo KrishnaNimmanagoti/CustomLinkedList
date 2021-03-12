@@ -97,6 +97,45 @@ public class CustomLinkedList<T> {
         }
     }
 
+    public boolean delete(T value) {
+        Node temp1 = head;
+        int i = 1;
+        boolean flag = true;
+        boolean returnFlag = false;
+        while (temp1.key != value) {
+            temp1 = temp1.next;
+            i++;
+            if (temp1.next == null && temp1.key != value){
+                flag = false;
+                break;
+            }
+        }
+        if (flag) {
+            if (i == 1 && value == temp1.key) {
+                deleteFirst();
+                System.out.println("The size of LinkeList is:" + size);
+                returnFlag = true;
+            }
+            else {
+                Node temp2 = head;
+                for (int j = 1; j < i - 1; j++) {
+                    temp2 = temp2.next;
+                }
+                temp2.next = temp1.next;
+                size--;
+                System.out.println("The size of LinkeList is:" + size);
+                returnFlag = true;
+            }
+        }
+        else {
+            System.out.println("There is no such: " + value + " in linkedlist");
+            returnFlag = true;
+        }
+        return returnFlag;
+    }
+
+
+
     public boolean search(T value) {
         Node node, temp;
         boolean flag = false;
