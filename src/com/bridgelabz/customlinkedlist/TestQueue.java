@@ -10,9 +10,9 @@ public class TestQueue {
     @BeforeEach
     void setUp() {
         queue = new Queue();
-        queue.push(58);
-        queue.push(54);
-        queue.push(87);
+        queue.push(45);
+        queue.push(43);
+        queue.push(23);
     }
 
     @Test
@@ -22,4 +22,17 @@ public class TestQueue {
         System.out.println(result);
         Assertions.assertEquals(58, result);
     }
+
+    @Test
+    public void searchTest() {
+        Assertions.assertTrue(queue.search(56));
+    }
+
+    @Test
+    public void deleteTest() {
+        Assertions.assertTrue(queue.delete(3));
+        queue.delete(44);
+        queue.viewList();
+    }
+
 }
