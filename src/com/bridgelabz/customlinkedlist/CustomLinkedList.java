@@ -1,6 +1,6 @@
 package com.bridgelabz.customlinkedlist;
 
-public class CustomLinkedList<T> {
+public class CustomLinkedList<T extends Comparable<T>> {
     int size;
     Node head;
     int pos;
@@ -167,5 +167,16 @@ public class CustomLinkedList<T> {
         System.out.println("The provide value " + placeValue + " is placed after " + keyValue +
                             " in the position: " + (pos+1));
         return result;
+    }
+
+    public void insertInOrder(T value){
+        Node<T> temp = head;
+        for(int i=0; i<size; i++){
+            if(temp.key.compareTo(value) > 0){
+                addAtPosition(value, i);
+                return;
+            }
+        }
+        add(value);
     }
 }

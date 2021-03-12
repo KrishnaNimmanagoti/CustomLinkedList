@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 
 public class CustomLinkedListTestingInJUnit {
 
-    CustomLinkedList<Object> customLinkedList;
+    CustomLinkedList<Integer> customLinkedList;
 
     @BeforeEach
     public void setup() {
