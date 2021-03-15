@@ -12,7 +12,7 @@ public class CustomLinkedListTestingInJUnit {
         customLinkedList = new CustomLinkedList<>();
         customLinkedList.add(70);
         customLinkedList.add(30);
-        customLinkedList.add(44);
+        customLinkedList.add(33);
         customLinkedList.add(66);
         customLinkedList.add(77);
         customLinkedList.add(88);

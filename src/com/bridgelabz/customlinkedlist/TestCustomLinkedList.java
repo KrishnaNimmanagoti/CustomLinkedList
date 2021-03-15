@@ -5,13 +5,13 @@ public class TestCustomLinkedList {
     public static void main(String[] args) {
         CustomLinkedList<Integer> customLinkedList = new CustomLinkedList<>();
 
-        customLinkedList.insertInOrder(70);
-        customLinkedList.insertInOrder(30);
-        customLinkedList.insertInOrder(44);
-        customLinkedList.insertInOrder(66);
-        customLinkedList.insertInOrder(77);
-        customLinkedList.insertInOrder(88);
-        customLinkedList.insertInOrder(99);
+        customLinkedList.add(70);
+        customLinkedList.add(30);
+        customLinkedList.addAtFirst(44);
+        customLinkedList.addAtPosition(59, 2);
+        customLinkedList.add(77);
+        customLinkedList.add(88);
+        customLinkedList.add(99);
         
         customLinkedList.viewList();
     }

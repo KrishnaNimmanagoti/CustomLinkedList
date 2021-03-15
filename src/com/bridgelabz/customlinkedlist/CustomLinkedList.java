@@ -5,6 +5,8 @@ public class CustomLinkedList<T extends Comparable<T>> {
     Node<T> head;
     int pos;
 
+
+
     public CustomLinkedList() {
         this.size = 0;
         this.head = null;
